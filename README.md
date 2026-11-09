@@ -13,6 +13,9 @@
 | 基础技术示例 | [Embedding与FAISS元数据检索](应用侧/基础技术示例/Embedding与FAISS元数据检索/案例说明.md) | 生成文本向量并将搜索结果映射回业务元数据。 | OpenAI兼容SDK、NumPy、FAISS |
 | 搜索与推荐 | [酒店文本相似推荐](应用侧/搜索与推荐/酒店文本相似推荐/案例说明.md) | 根据酒店描述查找相似酒店。 | pandas、scikit-learn、Matplotlib |
 | 模型与服务示例 | [Word2Vec词向量训练](应用侧/模型与服务示例/Word2Vec词向量训练/案例说明.md) | 训练中文词向量并计算词相似度。 | Gensim、jieba、NumPy |
+| 知识问答与文档处理 | [PDF问答与直接提示词生成](应用侧/知识问答与文档处理/PDF问答与直接提示词生成/案例说明.md) | 检索PDF片段并通过直接提示词调用生成回答。 | PyPDF2、LangChain Text Splitters、FAISS、Tongyi |
+| 模型与服务示例 | [BGE与GTE文本向量推理](应用侧/模型与服务示例/BGE与GTE文本向量推理/案例说明.md) | 比较本地Embedding模型的向量生成与相似度计算。 | FlagEmbedding、SentenceTransformers、PyTorch、ModelScope |
+| 搜索与研究助手 | [查询改写与搜索策略](应用侧/搜索与研究助手/查询改写与搜索策略/案例说明.md) | 将上下文依赖问题补全，并识别联网检索需求。 | DashScope、Python JSON |
 
 ## 框架技术索引
 
@@ -30,6 +33,9 @@
 | 知识检索与问答 | [LangChain PDF问答](框架技术侧/知识检索与问答/LangChain PDF问答.md) | [PDF问答与页码溯源](应用侧/知识问答与文档处理/PDF问答与页码溯源/案例说明.md) |
 | 向量化与检索 | [Gensim Word2Vec训练](框架技术侧/向量化与检索/Gensim Word2Vec训练.md) | [Word2Vec词向量训练](应用侧/模型与服务示例/Word2Vec词向量训练/案例说明.md) |
 | 向量化与检索 | [Scikit-learn TF-IDF推荐](框架技术侧/向量化与检索/Scikit-learn TF-IDF推荐.md) | [酒店文本相似推荐](应用侧/搜索与推荐/酒店文本相似推荐/案例说明.md) |
+| 向量化与检索 | [BGE与GTE向量推理](框架技术侧/向量化与检索/BGE与GTE向量推理.md) | [BGE与GTE文本向量推理](应用侧/模型与服务示例/BGE与GTE文本向量推理/案例说明.md) |
+| 查询改写与搜索 | [DashScope查询改写](框架技术侧/查询改写与搜索/DashScope查询改写.md) | [查询改写与搜索策略](应用侧/搜索与研究助手/查询改写与搜索策略/案例说明.md) |
+| 知识检索与问答 | [Tongyi检索上下文生成](框架技术侧/知识检索与问答/Tongyi检索上下文生成.md) | [PDF问答与直接提示词生成](应用侧/知识问答与文档处理/PDF问答与直接提示词生成/案例说明.md) |
 
 ## 使用说明
 
