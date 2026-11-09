@@ -32,6 +32,10 @@
 | 金融投研与投顾 | [多阶段智能投研助手](应用侧/金融投研与投顾/多阶段智能投研助手/案例说明.md) | 通过感知、建模、推理、决策和报告形成分析结果。 | LangGraph、Pydantic、Qwen-Agent、DashScope |
 | 金融投研与投顾 | [基金规则工具问答](应用侧/金融投研与投顾/基金规则工具问答/案例说明.md) | 从内存规则样例中按关键词或类别搜索并回答。 | LangChain create_agent、ChatTongyi |
 | 模型与服务示例 | [二手车价格预测与模型融合](应用侧/模型与服务示例/二手车价格预测与模型融合/案例说明.md) | 对结构化车辆数据进行价格回归与多模型融合。 | pandas、scikit-learn、CatBoost、LightGBM、XGBoost |
+| 搜索与研究助手 | [Qwen搜索与文档助手](应用侧/搜索与研究助手/Qwen搜索与文档助手/案例说明.md) | 组合本地文档检索、联网搜索和多轮问答。 | Qwen-Agent、DashScope、Elasticsearch、Tavily MCP、Gradio |
+| 搜索与研究助手 | [保险知识检索与搜索集成](应用侧/搜索与研究助手/保险知识检索与搜索集成/案例说明.md) | 组合本地文档检索、联网搜索和多轮问答。 | Qwen-Agent、DashScope、Elasticsearch、Tavily MCP、Gradio |
+| 搜索与研究助手 | [Elasticsearch保险问答与会话界面](应用侧/搜索与研究助手/Elasticsearch保险问答与会话界面/案例说明.md) | 组合本地文档检索、联网搜索和多轮问答。 | Qwen-Agent、DashScope、Elasticsearch、Tavily MCP、Gradio |
+| 基础技术示例 | [Elasticsearch保险全文检索](应用侧/基础技术示例/Elasticsearch保险全文检索/案例说明.md) | 独立演示保险文档索引与检索。 | Elasticsearch、Python |
 
 ## 框架技术索引
 
@@ -67,6 +71,7 @@
 | 流程编排与工具调用 | [LangGraph工具循环与失败重试](框架技术侧/流程编排与工具调用/LangGraph工具循环与失败重试.md) | [工具循环与混合式投顾](应用侧/金融投研与投顾/工具循环与混合式投顾/案例说明.md)、[多阶段智能投研助手](应用侧/金融投研与投顾/多阶段智能投研助手/案例说明.md) |
 | 流程编排与工具调用 | [LangChain规则查询Agent](框架技术侧/流程编排与工具调用/LangChain规则查询Agent.md) | [基金规则工具问答](应用侧/金融投研与投顾/基金规则工具问答/案例说明.md) |
 | 模型训练与预测 | [XGBoost回归与模型融合](框架技术侧/模型训练与预测/XGBoost回归与模型融合.md) | [二手车价格预测与模型融合](应用侧/模型与服务示例/二手车价格预测与模型融合/案例说明.md) |
+| 知识检索与问答 | [Elasticsearch检索工具与联网补充](框架技术侧/知识检索与问答/Elasticsearch检索工具与联网补充.md) | [Elasticsearch保险问答与会话界面](应用侧/搜索与研究助手/Elasticsearch保险问答与会话界面/案例说明.md) |
 
 ## 使用说明
 
