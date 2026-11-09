@@ -45,6 +45,7 @@
 | 基础技术示例 | [LangChain模型工具与会话基础](应用侧/基础技术示例/LangChain模型工具与会话基础/案例说明.md) | 展示提示词管道、搜索计算工具和带历史的对话。 | LangChain、Tongyi、SerpAPI |
 | 基础技术示例 | [LangChain文本工具与LCEL组合](应用侧/基础技术示例/LangChain文本工具与LCEL组合/案例说明.md) | 组合文本分析、格式转换及行数统计等工具。 | LangChain Runnables、Tongyi |
 | 自动化与工具助手 | [网络故障诊断Agent](应用侧/自动化与工具助手/网络故障诊断Agent/案例说明.md) | 通过网络诊断工具组合解释用户报告的故障。 | LangChain create_agent、ChatTongyi |
+| 知识问答与文档处理 | [多框架多文件智能问答](应用侧/知识问答与文档处理/多框架多文件智能问答/案例说明.md) | 对同一文档目录提供LangChain、LlamaIndex与Qwen-Agent问答实现。 | LangChain、LlamaIndex、Qwen-Agent、DashScope、FAISS |
 
 ## 框架技术索引
 
@@ -87,6 +88,9 @@
 | 状态与记忆 | [LangChain会话历史管理](框架技术侧/状态与记忆/LangChain会话历史管理.md) | [LangChain模型工具与会话基础](应用侧/基础技术示例/LangChain模型工具与会话基础/案例说明.md) |
 | 流程编排与工具调用 | [LangChain LCEL串并行组合](框架技术侧/流程编排与工具调用/LangChain LCEL串并行组合.md) | [LangChain文本工具与LCEL组合](应用侧/基础技术示例/LangChain文本工具与LCEL组合/案例说明.md) |
 | 流程编排与工具调用 | [LangChain诊断工具调度](框架技术侧/流程编排与工具调用/LangChain诊断工具调度.md) | [网络故障诊断Agent](应用侧/自动化与工具助手/网络故障诊断Agent/案例说明.md) |
+| 知识检索与问答 | [LangChain多文件问答](框架技术侧/知识检索与问答/LangChain多文件问答.md) | [多框架多文件智能问答](应用侧/知识问答与文档处理/多框架多文件智能问答/案例说明.md) |
+| 知识检索与问答 | [LlamaIndex检索工具Agent](框架技术侧/知识检索与问答/LlamaIndex检索工具Agent.md) | [多框架多文件智能问答](应用侧/知识问答与文档处理/多框架多文件智能问答/案例说明.md) |
+| 知识检索与问答 | [Qwen-Agent文件知识接入](框架技术侧/知识检索与问答/Qwen-Agent文件知识接入.md) | [多框架多文件智能问答](应用侧/知识问答与文档处理/多框架多文件智能问答/案例说明.md) |
 
 ## 使用说明
 
