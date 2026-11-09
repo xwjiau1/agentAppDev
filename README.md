@@ -42,6 +42,9 @@
 | 自动化与工具助手 | [OpenManus浏览器与视觉操作](应用侧/自动化与工具助手/OpenManus浏览器与视觉操作/案例说明.md) | 组织模型、浏览器、代码执行和MCP工具完成多步任务。 | OpenManus、Pydantic、FastAPI、MCP、浏览器工具 |
 | 自动化与工具助手 | [OpenManus文档检索扩展](应用侧/自动化与工具助手/OpenManus文档检索扩展/案例说明.md) | 组织模型、浏览器、代码执行和MCP工具完成多步任务。 | OpenManus、Pydantic、FastAPI、MCP、浏览器工具 |
 | 自动化与工具助手 | [LangGraph规划执行与人工审查](应用侧/自动化与工具助手/LangGraph规划执行与人工审查/案例说明.md) | 以规划、执行和审查循环组织任务。 | LangGraph、ChatOpenAI、MemorySaver |
+| 基础技术示例 | [LangChain模型工具与会话基础](应用侧/基础技术示例/LangChain模型工具与会话基础/案例说明.md) | 展示提示词管道、搜索计算工具和带历史的对话。 | LangChain、Tongyi、SerpAPI |
+| 基础技术示例 | [LangChain文本工具与LCEL组合](应用侧/基础技术示例/LangChain文本工具与LCEL组合/案例说明.md) | 组合文本分析、格式转换及行数统计等工具。 | LangChain Runnables、Tongyi |
+| 自动化与工具助手 | [网络故障诊断Agent](应用侧/自动化与工具助手/网络故障诊断Agent/案例说明.md) | 通过网络诊断工具组合解释用户报告的故障。 | LangChain create_agent、ChatTongyi |
 
 ## 框架技术索引
 
@@ -81,6 +84,9 @@
 | 流程编排与工具调用 | [OpenManus工具执行循环](框架技术侧/流程编排与工具调用/OpenManus工具执行循环.md) | [OpenManus通用任务助手](应用侧/自动化与工具助手/OpenManus通用任务助手/案例说明.md) |
 | 平台与模型服务接入 | [Daytona沙箱与GUI动作模型](框架技术侧/平台与模型服务接入/Daytona沙箱与GUI动作模型.md) | [Daytona沙箱执行](应用侧/基础技术示例/Daytona沙箱执行/案例说明.md)、[GUI视觉动作生成](应用侧/多模态与行业应用/GUI视觉动作生成/案例说明.md) |
 | 流程编排与工具调用 | [LangGraph规划执行与人工审查](框架技术侧/流程编排与工具调用/LangGraph规划执行与人工审查.md) | [LangGraph规划执行与人工审查](应用侧/自动化与工具助手/LangGraph规划执行与人工审查/案例说明.md) |
+| 状态与记忆 | [LangChain会话历史管理](框架技术侧/状态与记忆/LangChain会话历史管理.md) | [LangChain模型工具与会话基础](应用侧/基础技术示例/LangChain模型工具与会话基础/案例说明.md) |
+| 流程编排与工具调用 | [LangChain LCEL串并行组合](框架技术侧/流程编排与工具调用/LangChain LCEL串并行组合.md) | [LangChain文本工具与LCEL组合](应用侧/基础技术示例/LangChain文本工具与LCEL组合/案例说明.md) |
+| 流程编排与工具调用 | [LangChain诊断工具调度](框架技术侧/流程编排与工具调用/LangChain诊断工具调度.md) | [网络故障诊断Agent](应用侧/自动化与工具助手/网络故障诊断Agent/案例说明.md) |
 
 ## 使用说明
 
