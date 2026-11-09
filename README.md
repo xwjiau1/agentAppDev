@@ -41,6 +41,7 @@
 | 自动化与工具助手 | [OpenManus通用任务助手](应用侧/自动化与工具助手/OpenManus通用任务助手/案例说明.md) | 组织模型、浏览器、代码执行和MCP工具完成多步任务。 | OpenManus、Pydantic、FastAPI、MCP、浏览器工具 |
 | 自动化与工具助手 | [OpenManus浏览器与视觉操作](应用侧/自动化与工具助手/OpenManus浏览器与视觉操作/案例说明.md) | 组织模型、浏览器、代码执行和MCP工具完成多步任务。 | OpenManus、Pydantic、FastAPI、MCP、浏览器工具 |
 | 自动化与工具助手 | [OpenManus文档检索扩展](应用侧/自动化与工具助手/OpenManus文档检索扩展/案例说明.md) | 组织模型、浏览器、代码执行和MCP工具完成多步任务。 | OpenManus、Pydantic、FastAPI、MCP、浏览器工具 |
+| 自动化与工具助手 | [LangGraph规划执行与人工审查](应用侧/自动化与工具助手/LangGraph规划执行与人工审查/案例说明.md) | 以规划、执行和审查循环组织任务。 | LangGraph、ChatOpenAI、MemorySaver |
 
 ## 框架技术索引
 
@@ -79,6 +80,7 @@
 | 知识检索与问答 | [Elasticsearch检索工具与联网补充](框架技术侧/知识检索与问答/Elasticsearch检索工具与联网补充.md) | [Elasticsearch保险问答与会话界面](应用侧/搜索与研究助手/Elasticsearch保险问答与会话界面/案例说明.md) |
 | 流程编排与工具调用 | [OpenManus工具执行循环](框架技术侧/流程编排与工具调用/OpenManus工具执行循环.md) | [OpenManus通用任务助手](应用侧/自动化与工具助手/OpenManus通用任务助手/案例说明.md) |
 | 平台与模型服务接入 | [Daytona沙箱与GUI动作模型](框架技术侧/平台与模型服务接入/Daytona沙箱与GUI动作模型.md) | [Daytona沙箱执行](应用侧/基础技术示例/Daytona沙箱执行/案例说明.md)、[GUI视觉动作生成](应用侧/多模态与行业应用/GUI视觉动作生成/案例说明.md) |
+| 流程编排与工具调用 | [LangGraph规划执行与人工审查](框架技术侧/流程编排与工具调用/LangGraph规划执行与人工审查.md) | [LangGraph规划执行与人工审查](应用侧/自动化与工具助手/LangGraph规划执行与人工审查/案例说明.md) |
 
 ## 使用说明
 
