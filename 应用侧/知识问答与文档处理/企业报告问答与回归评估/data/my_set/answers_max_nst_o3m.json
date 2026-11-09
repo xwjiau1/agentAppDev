@@ -1,0 +1,175 @@
+{
+  "answers": [
+    {
+      "question_text": "“星辰科技”2024年的营业收入是多少亿元？",
+      "kind": "number",
+      "value": "{\n  \"step_by_step_analysis\": \"1. 问题询问‘星辰科技’2024年的营业收入。\\n2. 年报第2页的‘财务摘要’部分列出了2024年的营业收入数据。\\n3. 数据显示营业收入为58.6亿元。\\n4. 无需计算，直接取值。\",\n  \"reasoning_summary\": \"年报第2页明确给出2024年营业收入，无需推算。\",\n  \"relevant_pages\": [2],\n  \"final_answer\": 58.6\n}",
+      "references": [
+        {
+          "pdf_sha1": "8df3bab3c6295f08d78b1530e066c4fd10e106b8",
+          "page_index": 0
+        },
+        {
+          "pdf_sha1": "8df3bab3c6295f08d78b1530e066c4fd10e106b8",
+          "page_index": 1
+        }
+      ]
+    },
+    {
+      "question_text": "“蓝海能源”2024年的研发投入是多少亿元？",
+      "kind": "number",
+      "value": "{\n  \"step_by_step_analysis\": \"1. 问题询问‘蓝海能源’2024年的研发投入。\\n2. 年报第2页的‘财务摘要’部分列明了2024年和2023年的研发投入数据。\\n3. 2024年研发投入为4.2亿元，与问题直接匹配。\\n4. 数据单位是人民币亿元，无需额外转换。\\n5. 因此答案可以直接从该页获取。\",\n  \"reasoning_summary\": \"年报第2页明确列出2024年研发投入为4.2亿元，无需推算。\",\n  \"relevant_pages\": [2],\n  \"final_answer\": 4.2\n}",
+      "references": [
+        {
+          "pdf_sha1": "e2c182c795631ef43cbb47618d290ca7e125b75a",
+          "page_index": 0
+        },
+        {
+          "pdf_sha1": "e2c182c795631ef43cbb47618d290ca7e125b75a",
+          "page_index": 2
+        }
+      ]
+    },
+    {
+      "question_text": "“峰瑞制药”2024年的净利润是多少亿元？",
+      "kind": "number",
+      "value": "{\n  \"step_by_step_analysis\": \"1. 问题询问'峰瑞制药'2024年的净利润。\\n2. 年报第2页的'财务摘要'部分列明了2024年净利润为5.1亿元。\\n3. 数据单位是人民币亿元，与问题一致。\\n4. 无需计算，直接取值。\",\n  \"reasoning_summary\": \"年报第2页直接给出2024年净利润，无需推算。\",\n  \"relevant_pages\": [2],\n  \"final_answer\": 5.1\n}",
+      "references": [
+        {
+          "pdf_sha1": "b257fd4d701459ac4c3f055093811c217c14ffcd",
+          "page_index": 0
+        },
+        {
+          "pdf_sha1": "b257fd4d701459ac4c3f055093811c217c14ffcd",
+          "page_index": 2
+        }
+      ]
+    },
+    {
+      "question_text": "“星辰科技”2024年的研发人员占员工总数的比例是多少？",
+      "kind": "number",
+      "value": "{\n  \"step_by_step_analysis\": \"1. 问题询问‘星辰科技’2024年的研发人员占员工总数的比例。\\n2. 年报第6页明确提到‘截至2024年末，公司在职员工总数为4,850人，其中研发人员占比62%’。\\n3. 该数据直接回答了问题，无需进一步计算或推断。\\n4. 因此，答案是62%。\",\n  \"reasoning_summary\": \"年报第6页直接给出研发人员占比，无需额外计算。\",\n  \"relevant_pages\": [6],\n  \"final_answer\": \"62%\"\n}",
+      "references": [
+        {
+          "pdf_sha1": "8df3bab3c6295f08d78b1530e066c4fd10e106b8",
+          "page_index": 0
+        },
+        {
+          "pdf_sha1": "8df3bab3c6295f08d78b1530e066c4fd10e106b8",
+          "page_index": 5
+        }
+      ]
+    },
+    {
+      "question_text": "“峰瑞制药”是否在2024年宣布了分红政策变更？",
+      "kind": "boolean",
+      "value": "{\n  \"step_by_step_analysis\": \"1. 问题询问峰瑞制药是否在2024年宣布了分红政策变更。\\n2. 从页面5的内容来看，董事会宣布自2024年度起，现金分红比例由净利润的20%提高至35%，并明确指出这是分红政策变更。\\n3. 分红政策变更已经股东大会审议通过，说明该变更具有正式性。\\n4. 没有其他信息表明该政策变更被撤销或修改。\\n5. 因此，可以确定峰瑞制药在2024年确实宣布了分红政策变更。\",\n  \"reasoning_summary\": \"页面5明确提到分红政策变更，并且已通过股东大会审议，因此答案为True。\",\n  \"relevant_pages\": [5],\n  \"final_answer\": true\n}",
+      "references": [
+        {
+          "pdf_sha1": "b257fd4d701459ac4c3f055093811c217c14ffcd",
+          "page_index": 0
+        },
+        {
+          "pdf_sha1": "b257fd4d701459ac4c3f055093811c217c14ffcd",
+          "page_index": 4
+        }
+      ]
+    },
+    {
+      "question_text": "“星辰科技”在年报中是否提及并购事项？",
+      "kind": "boolean",
+      "value": "{\n  \"step_by_step_analysis\": \"1. 问题询问是否提及并购事项。\\n2. 年报第3页明确提到『报告期内公司未发生任何并购或重大资产重组事项』。\\n3. 其他页面没有关于并购的其他信息。\\n4. 因此，年报中明确说明没有并购事项。\",\n  \"reasoning_summary\": \"年报明确指出未发生并购事项，答案为False。\",\n  \"relevant_pages\": [3],\n  \"final_answer\": false\n}",
+      "references": [
+        {
+          "pdf_sha1": "8df3bab3c6295f08d78b1530e066c4fd10e106b8",
+          "page_index": 0
+        },
+        {
+          "pdf_sha1": "8df3bab3c6295f08d78b1530e066c4fd10e106b8",
+          "page_index": 2
+        }
+      ]
+    },
+    {
+      "question_text": "“蓝海能源”是否披露了新的风险因素？",
+      "kind": "boolean",
+      "value": "{\n  \"step_by_step_analysis\": \"1. 问题询问是否披露了新的风险因素。\\n2. 年报第7页提到新增风险因素：电价市场化交易风险。\\n3. 其他页面未提及新增风险因素。\\n4. 确认该风险因素是新增的，符合问题要求。\",\n  \"reasoning_summary\": \"年报第7页明确提到新增风险因素，答案为True。\",\n  \"relevant_pages\": [7],\n  \"final_answer\": true\n}",
+      "references": [
+        {
+          "pdf_sha1": "e2c182c795631ef43cbb47618d290ca7e125b75a",
+          "page_index": 0
+        },
+        {
+          "pdf_sha1": "e2c182c795631ef43cbb47618d290ca7e125b75a",
+          "page_index": 6
+        }
+      ]
+    },
+    {
+      "question_text": "“星辰科技”的首席执行官（CEO）是谁？",
+      "kind": "name",
+      "value": "{\n  \"step_by_step_analysis\": \"1. 问题询问的是‘星辰科技’的首席执行官（CEO）。\\n2. 根据提供的信息，星辰科技的全称是‘星辰科技股份有限公司’。\\n3. 在第4页的董事、监事与高级管理人员列表中，明确提到陈志远担任‘首席执行官（CEO）兼董事长’。\\n4. 因此，可以确定陈志远是星辰科技的CEO。\",\n  \"reasoning_summary\": \"年报中明确列出陈志远为CEO，直接回答了问题。\",\n  \"relevant_pages\": [4],\n  \"final_answer\": \"陈志远\"\n}",
+      "references": [
+        {
+          "pdf_sha1": "8df3bab3c6295f08d78b1530e066c4fd10e106b8",
+          "page_index": 0
+        },
+        {
+          "pdf_sha1": "8df3bab3c6295f08d78b1530e066c4fd10e106b8",
+          "page_index": 3
+        }
+      ]
+    },
+    {
+      "question_text": "“蓝海能源”的首席财务官（CFO）是谁？",
+      "kind": "name",
+      "value": "{\n  \"step_by_step_analysis\": \"1. 问题询问的是‘蓝海能源’的首席财务官（CFO）。\\n2. 根据提供的信息，页码4中列出了公司高管名单。\\n3. 在页码4的表格中，林晓彤被列为首席财务官（CFO）。\\n4. 因此，答案明确为林晓彤。\",\n  \"reasoning_summary\": \"页码4的高管列表直接指明了林晓彤是首席财务官（CFO）。\",\n  \"relevant_pages\": [4],\n  \"final_answer\": \"林晓彤\"\n}",
+      "references": [
+        {
+          "pdf_sha1": "e2c182c795631ef43cbb47618d290ca7e125b75a",
+          "page_index": 0
+        },
+        {
+          "pdf_sha1": "e2c182c795631ef43cbb47618d290ca7e125b75a",
+          "page_index": 3
+        }
+      ]
+    },
+    {
+      "question_text": "“星辰科技”在2024年新任命了哪些高管？",
+      "kind": "names",
+      "value": "{\n    \"step_by_step_analysis\": \"1. 问题询问星辰科技在2024年新任命的高管。\\n2. 年报第4页列出高管信息，其中王磊于2024年3月新任首席技术官（CTO），赵敏于2024年7月新任市场总监。\\n3. 其他高管如陈志远和周雅琴未提及新任信息。\\n4. 综上，王磊和赵敏为2024年新任命的高管。\",\n    \"reasoning_summary\": \"年报第4页明确提到王磊和赵敏为2024年新任高管。\",\n    \"relevant_pages\": [4],\n    \"final_answer\": [\"王磊\", \"赵敏\"]\n}",
+      "references": [
+        {
+          "pdf_sha1": "8df3bab3c6295f08d78b1530e066c4fd10e106b8",
+          "page_index": 0
+        },
+        {
+          "pdf_sha1": "8df3bab3c6295f08d78b1530e066c4fd10e106b8",
+          "page_index": 3
+        }
+      ]
+    },
+    {
+      "question_text": "“星辰科技”和“蓝海能源”哪家公司2024年的研发投入更高？",
+      "kind": "comparative",
+      "value": "N/A",
+      "references": []
+    },
+    {
+      "question_text": "“恒宇银行”和“峰瑞制药”哪家公司2024年的营业收入更高？",
+      "kind": "comparative",
+      "value": "N/A",
+      "references": []
+    },
+    {
+      "question_text": "“量子跳动”2024年的营业收入是多少亿元？",
+      "kind": "number",
+      "value": "N/A",
+      "references": []
+    }
+  ],
+  "team_email": "79250515615@yandex.com",
+  "submission_name": "Ilia Ris v.4",
+  "details": "Custom pdf parsing + vDB + Router + Parent Document Retrieval + reranking + SO CoT; llm = qwen-turbo"
+}

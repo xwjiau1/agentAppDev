@@ -1,0 +1,26 @@
+{
+  "questions": [
+    {
+      "question_text": "Did Mercia Asset Management PLC mention any mergers or acquisitions in the annual report?",
+      "kind": "boolean",
+      "value": null,
+      "references": [],
+      "error": "ValueError: No report found with 'Mercia Asset Management PLC' company name.",
+      "answer_details": {
+        "$ref": "#/answer_details/0"
+      }
+    }
+  ],
+  "answer_details": [
+    {
+      "error_traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\admin\\Desktop\\AI大模型应用第19期\\8-项目实战：企业知识库\\RAG-Challenge-2-main\\src\\questions_processing.py\", line 315, in _process_single_question\n    answer_dict = self.process_question(question_text, schema)\n                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\admin\\Desktop\\AI大模型应用第19期\\8-项目实战：企业知识库\\RAG-Challenge-2-main\\src\\questions_processing.py\", line 229, in process_question\n    answer_dict = self.get_answer_for_company(company_name=company_name, question=question, schema=schema)\n                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\admin\\Desktop\\AI大模型应用第19期\\8-项目实战：企业知识库\\RAG-Challenge-2-main\\src\\questions_processing.py\", line 170, in get_answer_for_company\n    retrieval_results = retriever.retrieve_by_company_name(\n                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\admin\\Desktop\\AI大模型应用第19期\\8-项目实战：企业知识库\\RAG-Challenge-2-main\\src\\retrieval.py\", line 345, in retrieve_by_company_name\n    vector_results = self.vector_retriever.retrieve_by_company_name(\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\admin\\Desktop\\AI大模型应用第19期\\8-项目实战：企业知识库\\RAG-Challenge-2-main\\src\\retrieval.py\", line 237, in retrieve_by_company_name\n    raise ValueError(f\"No report found with '{company_name}' company name.\")\nValueError: No report found with 'Mercia Asset Management PLC' company name.\n",
+      "self": "#/answer_details/0"
+    }
+  ],
+  "statistics": {
+    "total_questions": 1,
+    "error_count": 1,
+    "na_count": 0,
+    "success_count": 0
+  }
+}

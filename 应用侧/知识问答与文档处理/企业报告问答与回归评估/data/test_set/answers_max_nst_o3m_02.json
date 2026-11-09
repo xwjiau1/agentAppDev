@@ -1,0 +1,22 @@
+{
+  "answers": [
+    {
+      "question_text": "Did Mercia Asset Management PLC mention any mergers or acquisitions in the annual report?",
+      "kind": "boolean",
+      "value": "{\"status_code\": 403, \"request_id\": \"d693fa97-89e0-9391-b3ee-c5ec31fec33f\", \"code\": \"AccessDenied\", \"message\": \"Access denied. For details, see: https://help.aliyun.com/zh/model-studio/error-code#access-denied\", \"output\": null, \"usage\": null}",
+      "references": [
+        {
+          "pdf_sha1": "ac9aa244462c80705c3ff046542c02c459989742",
+          "page_index": 55
+        },
+        {
+          "pdf_sha1": "ac9aa244462c80705c3ff046542c02c459989742",
+          "page_index": 117
+        }
+      ]
+    }
+  ],
+  "team_email": "79250515615@yandex.com",
+  "submission_name": "Ilia Ris v.4",
+  "details": "Custom pdf parsing + vDB + Router + Parent Document Retrieval + reranking + SO CoT; llm = qwen-turbo"
+}

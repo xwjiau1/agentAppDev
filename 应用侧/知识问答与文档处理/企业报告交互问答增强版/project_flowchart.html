@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAG-CY 项目架构流程图</title>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@11.4.0/dist/mermaid.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            min-height: 100vh;
+            color: #e0e0e0;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .header h1 {
+            font-size: 2.5rem;
+            color: #4ecdc4;
+            margin-bottom: 10px;
+            font-weight: 300;
+            letter-spacing: 2px;
+        }
+        
+        .header p {
+            color: #8892b0;
+            font-size: 1.1rem;
+        }
+        
+        .section {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 16px;
+            padding: 30px;
+            margin-bottom: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .section-title {
+            font-size: 1.4rem;
+            color: #64ffda;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .section-title::before {
+            content: '';
+            width: 4px;
+            height: 24px;
+            background: linear-gradient(180deg, #4ecdc4, #44a08d);
+            border-radius: 2px;
+        }
+        
+        .mermaid-container {
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 12px;
+            padding: 20px;
+            overflow-x: auto;
+        }
+        
+        .mermaid {
+            background: transparent;
+        }
+        
+        .tech-stack {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+        
+        .tech-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        
+        .tech-card:hover {
+            background: rgba(255, 255, 255, 0.08);
+            transform: translateY(-2px);
+            border-color: rgba(78, 205, 196, 0.3);
+        }
+        
+        .tech-icon {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .tech-name {
+            color: #4ecdc4;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+        
+        .tech-desc {
+            color: #8892b0;
+            font-size: 0.9rem;
+        }
+        
+        .flow-description {
+            color: #a8b2d1;
+            font-size: 0.95rem;
+            line-height: 1.8;
+            margin-top: 15px;
+            padding-left: 20px;
+            border-left: 3px solid #4ecdc4;
+        }
+        
+        .module-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+        }
+        
+        .module-item {
+            background: rgba(78, 205, 196, 0.1);
+            border-left: 4px solid #4ecdc4;
+            border-radius: 0 8px 8px 0;
+            padding: 15px 20px;
+            transition: all 0.3s ease;
+        }
+        
+        .module-item:hover {
+            background: rgba(78, 205, 196, 0.15);
+        }
+        
+        .module-name {
+            color: #4ecdc4;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+        
+        .module-path {
+            color: #64ffda;
+            font-family: monospace;
+            font-size: 0.85rem;
+            margin-bottom: 8px;
+        }
+        
+        .module-desc {
+            color: #8892b0;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+        
+        .legend {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 20px;
+            padding: 15px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 8px;
+        }
+        
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #a8b2d1;
+            font-size: 0.9rem;
+        }
+        
+        .legend-color {
+            width: 16px;
+            height: 16px;
+            border-radius: 4px;
+        }
+        
+        .legend-color.data { background: #e74c3c; }
+        .legend-color.process { background: #3498db; }
+        .legend-color.storage { background: #2ecc71; }
+        .legend-color.model { background: #9b59b6; }
+        .legend-color.output { background: #f39c12; }
+        
+        .footer {
+            text-align: center;
+            padding: 30px;
+            color: #64748b;
+            font-size: 0.9rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            margin-top: 50px;
+        }
+        
+        .version-badge {
+            display: inline-block;
+            background: rgba(78, 205, 196, 0.2);
+            color: #4ecdc4;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>📊 RAG-CY 企业知识库问答系统</h1>
+            <p>基于检索增强生成技术的智能问答平台 | RAG Challenge 获胜方案</p>
+            <div class="version-badge">Version 2.0</div>
+        </div>
+
+        <!-- 项目概述 -->
+        <div class="section">
+            <h2 class="section-title">项目概述</h2>
+            <div class="flow-description">
+                <p><strong>RAG-CY</strong> 是一个基于检索增强生成（Retrieval-Augmented Generation）技术的企业知识库问答系统。该系统能够从公司年报、研究报告等结构化PDF文档中提取信息，并利用大语言模型生成准确、可溯源的问答结果。</p>
+                <p style="margin-top: 10px;">核心技术栈包括：<span style="color: #4ecdc4;">Docling</span>（PDF解析）、<span style="color: #4ecdc4;">FAISS</span>（向量检索）、<span style="color: #4ecdc4;">Qwen-Turbo</span>（问答生成），支持多公司比较、表格处理、引用校验等高级功能。</p>
+            </div>
+        </div>
+
+        <!-- 整体架构图 -->
+        <div class="section">
+            <h2 class="section-title">整体架构</h2>
+            <div class="mermaid-container">
+                <pre class="mermaid">
+flowchart TD
+    subgraph 数据源层["📚 数据源层"]
+        PDF[PDF年报/研报] -->|pdf_reports/| DS1
+        CSV[公司元数据] -->|subset.csv| DS2
+        JSON[问题集] -->|questions.json| DS3
+    end
+    
+    subgraph 数据处理层["🔧 数据处理层"]
+        DS1 --> A[PDF解析\npdf_parsing.py]
+        A --> B[表格序列化\ntables_serialization.py]
+        B --> C[文本分块\ntext_splitter.py]
+        C --> D[向量入库\ningestion.py]
+        DS2 --> D
+    end
+    
+    subgraph 存储层["💾 存储层"]
+        VDB[(FAISS向量库\nvector_dbs/)]
+        CD[(分块文档\nchunked_reports/)]
+        D --> VDB
+        D --> CD
+    end
+    
+    subgraph 检索层["🔍 检索层"]
+        R1[向量检索\nVectorRetriever]
+        R2[BM25检索\nBM25Retriever]
+        R3[混合检索\nHybridRetriever]
+        R4[LLM重排\nLLMReranker]
+        VDB --> R1
+        CD --> R2
+        R1 --> R3
+        R2 --> R3
+        R3 --> R4
+    end
+    
+    subgraph 问答层["🤖 问答层"]
+        Q1[问题处理\nquestions_processing.py]
+        Q2[API请求\napi_requests.py]
+        Q3[提示词管理\nprompts.py]
+        Q1 --> Q2
+        Q3 --> Q2
+    end
+    
+    subgraph 大模型层["🧠 大模型层"]
+        M1[Qwen-Turbo\n通义千问]
+        M2[GPT-4o]
+        M3[Gemini]
+        Q2 --> M1
+        Q2 --> M2
+        Q2 --> M3
+    end
+    
+    subgraph 输出层["📤 输出层"]
+        O1[结构化答案]
+        O2[引用溯源]
+        O3[推理过程]
+        M1 --> O1
+        M1 --> O2
+        M1 --> O3
+    end
+    
+    DS3 --> Q1
+    R4 --> Q1
+    
+    style 数据源层 fill:#1a1a2e,stroke:#4ecdc4,stroke-width:2
+    style 数据处理层 fill:#1a1a2e,stroke:#3498db,stroke-width:2
+    style 存储层 fill:#1a1a2e,stroke:#2ecc71,stroke-width:2
+    style 检索层 fill:#1a1a2e,stroke:#9b59b6,stroke-width:2
+    style 问答层 fill:#1a1a2e,stroke:#f39c12,stroke-width:2
+    style 大模型层 fill:#1a1a2e,stroke:#e74c3c,stroke-width:2
+    style 输出层 fill:#1a1a2e,stroke:#4ecdc4,stroke-width:2
+                </pre>
+            </div>
+        </div>
+
+        <!-- 详细流程图 -->
+        <div class="section">
+            <h2 class="section-title">详细处理流程</h2>
+            <div class="mermaid-container">
+                <pre class="mermaid">
+flowchart LR
+    A[PDF文件输入] --> B{Docling解析}
+    B -->|解析成功| C[结构化JSON输出]
+    B -->|解析失败| D[错误处理]
+    C --> E[表格序列化]
+    E --> F[Markdown转换]
+    F --> G[文本分块\n按Token分割]
+    G --> H[向量化\nDashScope Embedding]
+    H --> I[FAISS索引构建]
+    I --> J[向量库持久化]
+    
+    K[用户问题输入] --> L[公司名提取]
+    L --> M{多公司?}
+    M -->|单公司| N[向量检索\nTop-N]
+    M -->|多公司| O[拆分问题]
+    O --> P[并行检索]
+    P --> Q[结果汇总]
+    Q --> N
+    
+    N --> R{启用重排?}
+    R -->|是| S[LLM重排\n相关性评分]
+    R -->|否| T[直接使用]
+    S --> T
+    T --> U[构建RAG上下文]
+    U --> V[结构化提示词]
+    V --> W[LLM推理\nQwen-Turbo]
+    W --> X[答案解析]
+    X --> Y{引用校验}
+    Y -->|有效| Z[输出答案]
+    Y -->|无效| AA[幻觉修正]
+    AA --> Z
+    
+    Z --> AB[存储答案\nanswers.json]
+    Z --> AC[返回前端展示]
+    
+    style A fill:#e74c3c,color:#fff
+    style B fill:#3498db,color:#fff
+    style J fill:#2ecc71,color:#fff
+    style W fill:#9b59b6,color:#fff
+    style Z fill:#f39c12,color:#fff
+                </pre>
+            </div>
+        </div>
+
+        <!-- 模块关系图 -->
+        <div class="section">
+            <h2 class="section-title">模块依赖关系</h2>
+            <div class="mermaid-container">
+                <pre class="mermaid">
+graph TB
+    subgraph 核心模块
+        PIP[pipeline.py\n主流程调度]
+        QP[questions_processing.py\n问题处理]
+        AR[api_requests.py\nAPI请求]
+    end
+    
+    subgraph 数据处理模块
+        PP[pdf_parsing.py\nPDF解析]
+        TS[text_splitter.py\n文本分块]
+        ING[ingestion.py\n向量入库]
+        TM[tables_serialization.py\n表格序列化]
+        PM[parsed_reports_merging.py\n报告合并]
+    end
+    
+    subgraph 检索模块
+        RET[retrieval.py\n检索器]
+        RER[reranking.py\n重排器]
+    end
+    
+    subgraph 工具模块
+        PRO[prompts.py\n提示词管理]
+        API[api_request_parallel_processor.py\n并发处理]
+    end
+    
+    PIP --> PP
+    PIP --> TM
+    PIP --> PM
+    PIP --> TS
+    PIP --> ING
+    PIP --> QP
+    
+    QP --> RET
+    QP --> AR
+    
+    RET --> RER
+    
+    AR --> PRO
+    AR --> API
+    
+    ING --> RET
+    
+    style PIP fill:#4ecdc4,color:#1a1a2e
+    style QP fill:#4ecdc4,color:#1a1a2e
+    style AR fill:#4ecdc4,color:#1a1a2e
+    style PP fill:#3498db,color:#fff
+    style TS fill:#3498db,color:#fff
+    style ING fill:#3498db,color:#fff
+    style TM fill:#3498db,color:#fff
+    style RET fill:#9b59b6,color:#fff
+    style RER fill:#9b59b6,color:#fff
+    style PRO fill:#f39c12,color:#fff
+                </pre>
+            </div>
+        </div>
+
+        <!-- 技术栈展示 -->
+        <div class="section">
+            <h2 class="section-title">技术栈</h2>
+            <div class="tech-stack">
+                <div class="tech-card">
+                    <div class="tech-icon">📄</div>
+                    <div class="tech-name">Docling</div>
+                    <div class="tech-desc">PDF结构化解析</div>
+                </div>
+                <div class="tech-card">
+                    <div class="tech-icon">🧠</div>
+                    <div class="tech-name">FAISS</div>
+                    <div class="tech-desc">向量数据库</div>
+                </div>
+                <div class="tech-card">
+                    <div class="tech-icon">🤖</div>
+                    <div class="tech-name">Qwen-Turbo</div>
+                    <div class="tech-desc">问答模型</div>
+                </div>
+                <div class="tech-card">
+                    <div class="tech-icon">🔍</div>
+                    <div class="tech-name">BM25</div>
+                    <div class="tech-desc">关键词检索</div>
+                </div>
+                <div class="tech-card">
+                    <div class="tech-icon">🌐</div>
+                    <div class="tech-name">Streamlit</div>
+                    <div class="tech-desc">Web界面</div>
+                </div>
+                <div class="tech-card">
+                    <div class="tech-icon">📊</div>
+                    <div class="tech-name">Pandas</div>
+                    <div class="tech-desc">数据处理</div>
+                </div>
+                <div class="tech-card">
+                    <div class="tech-icon">✅</div>
+                    <div class="tech-name">Pydantic</div>
+                    <div class="tech-desc">数据验证</div>
+                </div>
+                <div class="tech-card">
+                    <div class="tech-icon">🔄</div>
+                    <div class="tech-name">LangChain</div>
+                    <div class="tech-desc">LLM框架</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 核心模块详解 -->
+        <div class="section">
+            <h2 class="section-title">核心模块详解</h2>
+            <div class="module-list">
+                <div class="module-item">
+                    <div class="module-name">Pipeline</div>
+                    <div class="module-path">src/pipeline.py</div>
+                    <div class="module-desc">系统主流程调度模块，串联PDF解析、表格序列化、报告规整、分块、向量化、问题处理等各阶段。</div>
+                </div>
+                <div class="module-item">
+                    <div class="module-name">QuestionsProcessor</div>
+                    <div class="module-path">src/questions_processing.py</div>
+                    <div class="module-desc">问题处理与答案生成核心，包括公司名抽取、检索调用、RAG上下文构建、LLM问答、引用页校验。</div>
+                </div>
+                <div class="module-item">
+                    <div class="module-name">VectorRetriever</div>
+                    <div class="module-path">src/retrieval.py</div>
+                    <div class="module-desc">向量语义检索器，支持按公司名检索相关文本块，返回向量距离最近的结果。</div>
+                </div>
+                <div class="module-item">
+                    <div class="module-name">APIProcessor</div>
+                    <div class="module-path">src/api_requests.py</div>
+                    <div class="module-desc">多供应商API统一封装，支持OpenAI、IBM、Gemini、DashScope等多种大模型。</div>
+                </div>
+                <div class="module-item">
+                    <div class="module-name">PDFParser</div>
+                    <div class="module-path">src/pdf_parsing.py</div>
+                    <div class="module-desc">使用Docling对PDF年报进行结构化解析，支持并行处理和元数据补全。</div>
+                </div>
+                <div class="module-item">
+                    <div class="module-name">LLMReranker</div>
+                    <div class="module-path">src/reranking.py</div>
+                    <div class="module-desc">基于LLM的检索结果重排序，结合向量分数和LLM相关性分数加权提升准确性。</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 流程图例 -->
+        <div class="section">
+            <h2 class="section-title">流程图例</h2>
+            <div class="legend">
+                <div class="legend-item">
+                    <div class="legend-color data"></div>
+                    <span>数据源</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color process"></div>
+                    <span>处理模块</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color storage"></div>
+                    <span>数据存储</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color model"></div>
+                    <span>大模型</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color output"></div>
+                    <span>输出结果</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 运行配置 -->
+        <div class="section">
+            <h2 class="section-title">运行配置</h2>
+            <div class="mermaid-container">
+                <pre class="mermaid">
+flowchart TD
+    A[启动方式] --> B[Streamlit Web]
+    A --> C[CLI命令行]
+    A --> D[Python API]
+    
+    B --> B1[streamlit run app_streamlit.py]
+    B1 --> B2[http://localhost:8501]
+    
+    C --> C1[python main.py parse-pdfs]
+    C --> C2[python main.py process-reports]
+    C --> C3[python main.py process-questions]
+    
+    D --> D1[pipeline.chunk_reports]
+    D --> D2[pipeline.create_vector_dbs]
+    D --> D3[pipeline.process_questions]
+    D --> D4[pipeline.answer_single_question]
+    
+    style A fill:#4ecdc4,color:#1a1a2e
+    style B fill:#3498db,color:#fff
+    style C fill:#3498db,color:#fff
+    style D fill:#3498db,color:#fff
+                </pre>
+            </div>
+        </div>
+
+        <!-- 性能优化策略 -->
+        <div class="section">
+            <h2 class="section-title">性能优化策略</h2>
+            <div class="mermaid-container">
+                <pre class="mermaid">
+graph LR
+    A[性能优化] --> B[并行处理]
+    A --> C[缓存机制]
+    A --> D[批量处理]
+    A --> E[限流控制]
+    
+    B --> B1[多进程PDF解析]
+    B --> B2[线程池检索]
+    B --> B3[异步API调用]
+    
+    C --> C1[向量库缓存]
+    C --> C2[检索结果缓存]
+    C --> C3[嵌入结果缓存]
+    
+    D --> D1[批量问题处理]
+    D --> D2[批量嵌入生成]
+    
+    E --> E1[QPM限流]
+    E --> E2[Token限流]
+    E --> E3[重试机制]
+    
+    style A fill:#4ecdc4,color:#1a1a2e
+    style B fill:#2ecc71,color:#fff
+    style C fill:#9b59b6,color:#fff
+    style D fill:#f39c12,color:#fff
+    style E fill:#e74c3c,color:#fff
+                </pre>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p>📁 项目路径: <span style="color: #64ffda;">RAG-cy/</span></p>
+            <p style="margin-top: 10px;">🔧 技术支持: RAG Challenge Winning Solution</p>
+        </div>
+    </div>
+
+    <script>
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: 'dark',
+            themeVariables: {
+                primaryColor: '#4ecdc4',
+                primaryTextColor: '#e0e0e0',
+                primaryBorderColor: '#4ecdc4',
+                lineColor: '#4ecdc4',
+                secondaryColor: '#3498db',
+                tertiaryColor: '#9b59b6',
+                backgroundColor: '#1a1a2e'
+            }
+        });
+    </script>
+</body>
+</html>

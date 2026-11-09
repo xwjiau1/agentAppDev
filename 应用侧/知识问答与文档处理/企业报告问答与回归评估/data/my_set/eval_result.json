@@ -1,0 +1,142 @@
+{
+  "answers_file": "answers_max_nst_o3m_03.json",
+  "total": 13,
+  "correct": 13,
+  "accuracy": 1.0,
+  "by_kind": {
+    "number": {
+      "correct": 4,
+      "total": 4
+    },
+    "boolean": {
+      "correct": 3,
+      "total": 3
+    },
+    "name": {
+      "correct": 2,
+      "total": 2
+    },
+    "names": {
+      "correct": 1,
+      "total": 1
+    },
+    "comparative": {
+      "correct": 2,
+      "total": 2
+    },
+    "na": {
+      "correct": 1,
+      "total": 1
+    }
+  },
+  "reference_compliance": "12/12",
+  "rows": [
+    {
+      "question": "“星辰科技”2024年的营业收入是多少亿元？",
+      "kind": "number",
+      "ok": true,
+      "value": 58.6,
+      "detail": "提取值=58.6 期望值=58.6",
+      "refs": 2
+    },
+    {
+      "question": "“蓝海能源”2024年的研发投入是多少亿元？",
+      "kind": "number",
+      "ok": true,
+      "value": 4.2,
+      "detail": "提取值=4.2 期望值=4.2",
+      "refs": 2
+    },
+    {
+      "question": "“峰瑞制药”2024年的净利润是多少亿元？",
+      "kind": "number",
+      "ok": true,
+      "value": 5.1,
+      "detail": "提取值=5.1 期望值=5.1",
+      "refs": 2
+    },
+    {
+      "question": "“星辰科技”2024年的研发人员占员工总数的比例是多少？",
+      "kind": "number",
+      "ok": true,
+      "value": "62%",
+      "detail": "提取值=62.0 期望值=62",
+      "refs": 2
+    },
+    {
+      "question": "“峰瑞制药”是否在2024年宣布了分红政策变更？",
+      "kind": "boolean",
+      "ok": true,
+      "value": true,
+      "detail": "归一化=True 期望=True 原始=True",
+      "refs": 2
+    },
+    {
+      "question": "“星辰科技”在年报中是否提及并购事项？",
+      "kind": "boolean",
+      "ok": true,
+      "value": false,
+      "detail": "归一化=False 期望=False 原始=False",
+      "refs": 2
+    },
+    {
+      "question": "“蓝海能源”是否披露了新的风险因素？",
+      "kind": "boolean",
+      "ok": true,
+      "value": true,
+      "detail": "归一化=True 期望=True 原始=True",
+      "refs": 2
+    },
+    {
+      "question": "“星辰科技”的首席执行官（CEO）是谁？",
+      "kind": "name",
+      "ok": true,
+      "value": "陈志远",
+      "detail": "期望 陈志远 包含于 '陈志远'",
+      "refs": 2
+    },
+    {
+      "question": "“蓝海能源”的首席财务官（CFO）是谁？",
+      "kind": "name",
+      "ok": true,
+      "value": "林晓彤",
+      "detail": "期望 林晓彤 包含于 '林晓彤'",
+      "refs": 2
+    },
+    {
+      "question": "“星辰科技”在2024年新任命了哪些高管？",
+      "kind": "names",
+      "ok": true,
+      "value": [
+        "王磊",
+        "赵敏"
+      ],
+      "detail": "缺失=[] 原始=['王磊', '赵敏']",
+      "refs": 2
+    },
+    {
+      "question": "“星辰科技”和“蓝海能源”哪家公司2024年的研发投入更高？",
+      "kind": "comparative",
+      "ok": true,
+      "value": "蓝海能源",
+      "detail": "期望 蓝海能源 原始='蓝海能源'",
+      "refs": 4
+    },
+    {
+      "question": "“恒宇银行”和“峰瑞制药”哪家公司2024年的营业收入更高？",
+      "kind": "comparative",
+      "ok": true,
+      "value": "恒宇银行",
+      "detail": "期望 恒宇银行 原始='恒宇银行'",
+      "refs": 4
+    },
+    {
+      "question": "“量子跳动”2024年的营业收入是多少亿元？",
+      "kind": "na",
+      "ok": true,
+      "value": "N/A",
+      "detail": "value='N/A'",
+      "refs": 0
+    }
+  ]
+}
