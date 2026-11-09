@@ -1,0 +1,11 @@
+.obsidian/
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.env
+.env.*
+!.env.example
+.idea/
+.vscode/
+.DS_Store
