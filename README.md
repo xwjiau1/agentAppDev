@@ -2,10 +2,15 @@
 
 收录可参考的应用项目、基础技术与模型服务示例。按应用场景寻找实现，按框架技术阅读机制、参数和实际代码。完整源码保留项目内部结构；案例说明记录依赖、数据与运行限制。
 
+## Python基础面试索引
+
+[进入Python基础侧：分类速查与复习顺序](Python基础侧/README.md)。每个知识点单独归档，含速记、面试问答、真实案例代码及易错追问；与应用侧、框架技术侧并列。
+
 ## 应用索引
 
 | 分类 | 案例 | 用途 | 技术栈 |
 |---|---|---|---|
+| 自动化与工具助手 | [通用Agent Harness](应用侧/自动化与工具助手/通用AgentHarness/案例说明.md) | 工具、权限、记忆、任务、协作与恢复运行时 | Python、Anthropic SDK、标准库 |
 | 基础技术示例 | [OpenEvals评估与自动化测试](应用侧/基础技术示例/OpenEvals评估与自动化测试/案例说明.md) | 单项裁判与批量评估 | OpenEvals、LangSmith |
 | 金融投研与投顾 | [Qwen投顾助手与Langfuse追踪](应用侧/金融投研与投顾/Qwen投顾助手与Langfuse追踪/案例说明.md) | 投顾对话与查询追踪 | Qwen-Agent、Langfuse |
 | 金融投研与投顾 | [投顾AI助手效果评估](应用侧/金融投研与投顾/投顾AI助手效果评估/案例说明.md) | 双路径投顾与规则、模型评分 | LangGraph、LangSmith、DeepEval |
@@ -53,16 +58,16 @@
 |---|---|---|
 | 效果评估 | [DeepEval效果评估](框架技术侧/效果评估/DeepEval效果评估.md) | [投顾AI助手效果评估](应用侧/金融投研与投顾/投顾AI助手效果评估/案例说明.md) |
 | 效果评估 | [LangSmith效果评估](框架技术侧/效果评估/LangSmith效果评估.md) | [投顾AI助手效果评估](应用侧/金融投研与投顾/投顾AI助手效果评估/案例说明.md) |
-| 效果评估 | [OpenEvals RAG评估](框架技术侧/效果评估/OpenEvals RAG评估.md) | [OpenEvals评估与自动化测试](应用侧/基础技术示例/OpenEvals评估与自动化测试/案例说明.md) |
+| 效果评估 | [OpenEvals RAG评估](框架技术侧/效果评估/OpenEvals%20RAG评估.md) | [OpenEvals评估与自动化测试](应用侧/基础技术示例/OpenEvals评估与自动化测试/案例说明.md) |
 | 效果评估 | [OpenEvals效果评估](框架技术侧/效果评估/OpenEvals效果评估.md) | [OpenEvals评估与自动化测试](应用侧/基础技术示例/OpenEvals评估与自动化测试/案例说明.md) |
 | 流程编排与工具调用 | [LangGraph流程编排](框架技术侧/流程编排与工具调用/LangGraph流程编排.md) | [投顾AI助手效果评估](应用侧/金融投研与投顾/投顾AI助手效果评估/案例说明.md) |
 | 流程编排与工具调用 | [Qwen-Agent工具调用与提示词编排](框架技术侧/流程编排与工具调用/Qwen-Agent工具调用与提示词编排.md) | [Qwen投顾助手与Langfuse追踪](应用侧/金融投研与投顾/Qwen投顾助手与Langfuse追踪/案例说明.md) |
 | 调用追踪 | [Langfuse调用追踪](框架技术侧/调用追踪/Langfuse调用追踪.md) | [Qwen投顾助手与Langfuse追踪](应用侧/金融投研与投顾/Qwen投顾助手与Langfuse追踪/案例说明.md) |
 | 调用追踪 | [LangSmith调用追踪](框架技术侧/调用追踪/LangSmith调用追踪.md) | [投顾AI助手效果评估](应用侧/金融投研与投顾/投顾AI助手效果评估/案例说明.md) |
 | 向量化与检索 | [FAISS向量与元数据检索](框架技术侧/向量化与检索/FAISS向量与元数据检索.md) | [Embedding与FAISS元数据检索](应用侧/基础技术示例/Embedding与FAISS元数据检索/案例说明.md) |
-| 知识检索与问答 | [LangChain PDF问答](框架技术侧/知识检索与问答/LangChain PDF问答.md) | [PDF问答与页码溯源](应用侧/知识问答与文档处理/PDF问答与页码溯源/案例说明.md) |
-| 向量化与检索 | [Gensim Word2Vec训练](框架技术侧/向量化与检索/Gensim Word2Vec训练.md) | [Word2Vec词向量训练](应用侧/模型与服务示例/Word2Vec词向量训练/案例说明.md) |
-| 向量化与检索 | [Scikit-learn TF-IDF推荐](框架技术侧/向量化与检索/Scikit-learn TF-IDF推荐.md) | [酒店文本相似推荐](应用侧/搜索与推荐/酒店文本相似推荐/案例说明.md) |
+| 知识检索与问答 | [LangChain PDF问答](框架技术侧/知识检索与问答/LangChain%20PDF问答.md) | [PDF问答与页码溯源](应用侧/知识问答与文档处理/PDF问答与页码溯源/案例说明.md) |
+| 向量化与检索 | [Gensim Word2Vec训练](框架技术侧/向量化与检索/Gensim%20Word2Vec训练.md) | [Word2Vec词向量训练](应用侧/模型与服务示例/Word2Vec词向量训练/案例说明.md) |
+| 向量化与检索 | [Scikit-learn TF-IDF推荐](框架技术侧/向量化与检索/Scikit-learn%20TF-IDF推荐.md) | [酒店文本相似推荐](应用侧/搜索与推荐/酒店文本相似推荐/案例说明.md) |
 | 向量化与检索 | [BGE与GTE向量推理](框架技术侧/向量化与检索/BGE与GTE向量推理.md) | [BGE与GTE文本向量推理](应用侧/模型与服务示例/BGE与GTE文本向量推理/案例说明.md) |
 | 查询改写与搜索 | [DashScope查询改写](框架技术侧/查询改写与搜索/DashScope查询改写.md) | [查询改写与搜索策略](应用侧/搜索与研究助手/查询改写与搜索策略/案例说明.md) |
 | 知识检索与问答 | [Tongyi检索上下文生成](框架技术侧/知识检索与问答/Tongyi检索上下文生成.md) | [PDF问答与直接提示词生成](应用侧/知识问答与文档处理/PDF问答与直接提示词生成/案例说明.md) |
@@ -76,8 +81,8 @@
 | 知识检索与问答 | [Streamlit企业知识库交互](框架技术侧/知识检索与问答/Streamlit企业知识库交互.md) | [企业报告知识库交互版](应用侧/知识问答与文档处理/企业报告知识库交互版/案例说明.md) |
 | 知识检索与问答 | [企业报告父页召回与LLM重排](框架技术侧/知识检索与问答/企业报告父页召回与LLM重排.md) | [企业报告问答与回归评估](应用侧/知识问答与文档处理/企业报告问答与回归评估/案例说明.md) |
 | 知识检索与问答 | [Streamlit单问题检索界面](框架技术侧/知识检索与问答/Streamlit单问题检索界面.md) | [企业报告交互问答增强版](应用侧/知识问答与文档处理/企业报告交互问答增强版/案例说明.md) |
-| 流程编排与工具调用 | [Qwen-Agent SQL工具调用](框架技术侧/流程编排与工具调用/Qwen-Agent SQL工具调用.md) | [门票订单查询与图表助手](应用侧/数据分析与ChatBI/门票订单查询与图表助手/案例说明.md) |
-| 流程编排与工具调用 | [Qwen-Agent MCP服务接入](框架技术侧/流程编排与工具调用/Qwen-Agent MCP服务接入.md) | [MCP地图搜索与文件助手](应用侧/自动化与工具助手/MCP地图搜索与文件助手/案例说明.md) |
+| 流程编排与工具调用 | [Qwen-Agent SQL工具调用](框架技术侧/流程编排与工具调用/Qwen-Agent%20SQL工具调用.md) | [门票订单查询与图表助手](应用侧/数据分析与ChatBI/门票订单查询与图表助手/案例说明.md) |
+| 流程编排与工具调用 | [Qwen-Agent MCP服务接入](框架技术侧/流程编排与工具调用/Qwen-Agent%20MCP服务接入.md) | [MCP地图搜索与文件助手](应用侧/自动化与工具助手/MCP地图搜索与文件助手/案例说明.md) |
 | 流程编排与工具调用 | [LangGraph工具循环与失败重试](框架技术侧/流程编排与工具调用/LangGraph工具循环与失败重试.md) | [工具循环与混合式投顾](应用侧/金融投研与投顾/工具循环与混合式投顾/案例说明.md)、[多阶段智能投研助手](应用侧/金融投研与投顾/多阶段智能投研助手/案例说明.md) |
 | 流程编排与工具调用 | [LangChain规则查询Agent](框架技术侧/流程编排与工具调用/LangChain规则查询Agent.md) | [基金规则工具问答](应用侧/金融投研与投顾/基金规则工具问答/案例说明.md) |
 | 模型训练与预测 | [XGBoost回归与模型融合](框架技术侧/模型训练与预测/XGBoost回归与模型融合.md) | [二手车价格预测与模型融合](应用侧/模型与服务示例/二手车价格预测与模型融合/案例说明.md) |
@@ -86,11 +91,30 @@
 | 平台与模型服务接入 | [Daytona沙箱与GUI动作模型](框架技术侧/平台与模型服务接入/Daytona沙箱与GUI动作模型.md) | [Daytona沙箱执行](应用侧/基础技术示例/Daytona沙箱执行/案例说明.md)、[GUI视觉动作生成](应用侧/多模态与行业应用/GUI视觉动作生成/案例说明.md) |
 | 流程编排与工具调用 | [LangGraph规划执行与人工审查](框架技术侧/流程编排与工具调用/LangGraph规划执行与人工审查.md) | [LangGraph规划执行与人工审查](应用侧/自动化与工具助手/LangGraph规划执行与人工审查/案例说明.md) |
 | 状态与记忆 | [LangChain会话历史管理](框架技术侧/状态与记忆/LangChain会话历史管理.md) | [LangChain模型工具与会话基础](应用侧/基础技术示例/LangChain模型工具与会话基础/案例说明.md) |
-| 流程编排与工具调用 | [LangChain LCEL串并行组合](框架技术侧/流程编排与工具调用/LangChain LCEL串并行组合.md) | [LangChain文本工具与LCEL组合](应用侧/基础技术示例/LangChain文本工具与LCEL组合/案例说明.md) |
+| 流程编排与工具调用 | [LangChain LCEL串并行组合](框架技术侧/流程编排与工具调用/LangChain%20LCEL串并行组合.md) | [LangChain文本工具与LCEL组合](应用侧/基础技术示例/LangChain文本工具与LCEL组合/案例说明.md) |
 | 流程编排与工具调用 | [LangChain诊断工具调度](框架技术侧/流程编排与工具调用/LangChain诊断工具调度.md) | [网络故障诊断Agent](应用侧/自动化与工具助手/网络故障诊断Agent/案例说明.md) |
 | 知识检索与问答 | [LangChain多文件问答](框架技术侧/知识检索与问答/LangChain多文件问答.md) | [多框架多文件智能问答](应用侧/知识问答与文档处理/多框架多文件智能问答/案例说明.md) |
 | 知识检索与问答 | [LlamaIndex检索工具Agent](框架技术侧/知识检索与问答/LlamaIndex检索工具Agent.md) | [多框架多文件智能问答](应用侧/知识问答与文档处理/多框架多文件智能问答/案例说明.md) |
 | 知识检索与问答 | [Qwen-Agent文件知识接入](框架技术侧/知识检索与问答/Qwen-Agent文件知识接入.md) | [多框架多文件智能问答](应用侧/知识问答与文档处理/多框架多文件智能问答/案例说明.md) |
+| Agent运行时 | [Agent Harness模型与工具循环](框架技术侧/Agent运行时/Agent%20Harness模型与工具循环.md) | [通用Agent Harness](应用侧/自动化与工具助手/通用AgentHarness/案例说明.md) |
+| Agent运行时 | [Harness工具分派与工作区路径约束](框架技术侧/Agent运行时/Harness工具分派与工作区路径约束.md) | [通用Agent Harness](应用侧/自动化与工具助手/通用AgentHarness/案例说明.md) |
+| 权限与扩展 | [Harness工具权限判定](框架技术侧/权限与扩展/Harness工具权限判定.md) | [通用Agent Harness](应用侧/自动化与工具助手/通用AgentHarness/案例说明.md) |
+| 权限与扩展 | [Harness事件钩子与短路处理](框架技术侧/权限与扩展/Harness事件钩子与短路处理.md) | [通用Agent Harness](应用侧/自动化与工具助手/通用AgentHarness/案例说明.md) |
+| 状态与记忆 | [Harness Todo状态校验](框架技术侧/状态与记忆/Harness%20Todo状态校验.md) | [通用Agent Harness](应用侧/自动化与工具助手/通用AgentHarness/案例说明.md) |
+| Agent运行时 | [Harness子代理上下文隔离](框架技术侧/Agent运行时/Harness子代理上下文隔离.md) | [通用Agent Harness](应用侧/自动化与工具助手/通用AgentHarness/案例说明.md) |
+| 权限与扩展 | [Harness技能目录与按需加载](框架技术侧/权限与扩展/Harness技能目录与按需加载.md) | [通用Agent Harness](应用侧/自动化与工具助手/通用AgentHarness/案例说明.md) |
+| 状态与记忆 | [Harness上下文压缩与调用结果配对](框架技术侧/状态与记忆/Harness上下文压缩与调用结果配对.md) | [通用Agent Harness](应用侧/自动化与工具助手/通用AgentHarness/案例说明.md) |
+| 状态与记忆 | [Harness文件记忆的筛选与召回](框架技术侧/状态与记忆/Harness文件记忆的筛选与召回.md) | [通用Agent Harness](应用侧/自动化与工具助手/通用AgentHarness/案例说明.md) |
+| 任务与协作 | [Harness持久任务与依赖状态](框架技术侧/任务与协作/Harness持久任务与依赖状态.md) | [通用Agent Harness](应用侧/自动化与工具助手/通用AgentHarness/案例说明.md) |
+| 任务与协作 | [Harness后台任务与结果回收](框架技术侧/任务与协作/Harness后台任务与结果回收.md) | [通用Agent Harness](应用侧/自动化与工具助手/通用AgentHarness/案例说明.md) |
+| 任务与协作 | [Harness定时任务队列与投递确认](框架技术侧/任务与协作/Harness定时任务队列与投递确认.md) | [通用Agent Harness](应用侧/自动化与工具助手/通用AgentHarness/案例说明.md) |
+| 任务与协作 | [Harness团队邮箱与任务分配](框架技术侧/任务与协作/Harness团队邮箱与任务分配.md) | [通用Agent Harness](应用侧/自动化与工具助手/通用AgentHarness/案例说明.md) |
+| 任务与协作 | [Harness任务绑定Git Worktree隔离](框架技术侧/任务与协作/Harness任务绑定Git%20Worktree隔离.md) | [通用Agent Harness](应用侧/自动化与工具助手/通用AgentHarness/案例说明.md) |
+| 权限与扩展 | [Harness MCP式插件命名与分派](框架技术侧/权限与扩展/Harness%20MCP式插件命名与分派.md) | [通用Agent Harness](应用侧/自动化与工具助手/通用AgentHarness/案例说明.md) |
+| Agent运行时 | [集成Harness的模块复用与入口协调](框架技术侧/Agent运行时/集成Harness的模块复用与入口协调.md) | [通用Agent Harness](应用侧/自动化与工具助手/通用AgentHarness/案例说明.md) |
+| Agent运行时 | [Harness工作流日志缓存与恢复](框架技术侧/Agent运行时/Harness工作流日志缓存与恢复.md) | [通用Agent Harness](应用侧/自动化与工具助手/通用AgentHarness/案例说明.md) |
+| Agent运行时 | [Harness目标评估与停止控制](框架技术侧/Agent运行时/Harness目标评估与停止控制.md) | [通用Agent Harness](应用侧/自动化与工具助手/通用AgentHarness/案例说明.md) |
+
 
 ## 使用说明
 
