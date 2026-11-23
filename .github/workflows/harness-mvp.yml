@@ -12,7 +12,8 @@ jobs:
       # 一个系统失败时，保留另一个系统的独立诊断结果。
       fail-fast: false
       matrix:
-        os: [ubuntu-latest, windows-latest]
+        # Python 3.12.8 有 Ubuntu 24.04 安装包，尚无 26.04 安装包。
+        os: [ubuntu-24.04, windows-latest]
     runs-on: ${{ matrix.os }}
     defaults:
       run:
