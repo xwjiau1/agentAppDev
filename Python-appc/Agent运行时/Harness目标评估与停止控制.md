@@ -14,21 +14,15 @@ GoalController在一轮结束后评估目标完成条件，给出allow、defer�
 
 ### 评估前的停止边界
 
-[s17_goal_loop/code.py，322–333行](../../application/自动化与工具助手/通用AgentHarness/s17_goal_loop/code.py#L322-L333)
+[s17_goal_loop/code.py，365–370行](../../application/自动化与工具助手/通用AgentHarness/s17_goal_loop/code.py#L365-L370)
 
 ```python
 if self.active is None:
-    return "No goal set"
-condition = self.active.condition
-self._record(
-    active=False,
-    met=False,
-    failed=False,
-    reason=reason,
-)
-self.active = None
-self.consecutive_blocks = 0
-return f"Goal cleared: {condition}"
+    return StopDecision("allow")
+if background_running:
+    return StopDecision(
+        "defer", "background work is still running"
+    )
 ```
 
 无目标直接allow；后台工作未完成时defer，不贸然宣布目标达成。

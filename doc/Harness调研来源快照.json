@@ -1,0 +1,284 @@
+{
+  "review_date": "2026-11-24",
+  "timezone": "Asia/Shanghai",
+  "method": "GitHub 官方仓库元数据、固定提交的指定文档与源码静态阅读；未安装依赖或运行候选项目，不包含性能复现。",
+  "repositories": [
+    {
+      "repository": "earendil-works/pi",
+      "default_branch": "main",
+      "commit": "a588a7bc4d1bc16554ed2a8044fd4be72ce26ec9",
+      "license": "MIT",
+      "metadata_url": "https://api.github.com/repos/earendil-works/pi",
+      "snapshot_url": "https://github.com/earendil-works/pi/tree/a588a7bc4d1bc16554ed2a8044fd4be72ce26ec9",
+      "reviewed_files": [
+        {
+          "path": "README.md",
+          "url": "https://github.com/earendil-works/pi/blob/a588a7bc4d1bc16554ed2a8044fd4be72ce26ec9/README.md",
+          "kind": "documentation"
+        },
+        {
+          "path": "packages/agent/README.md",
+          "url": "https://github.com/earendil-works/pi/blob/a588a7bc4d1bc16554ed2a8044fd4be72ce26ec9/packages/agent/README.md",
+          "kind": "documentation"
+        },
+        {
+          "path": "packages/agent/src/agent-loop.ts",
+          "url": "https://github.com/earendil-works/pi/blob/a588a7bc4d1bc16554ed2a8044fd4be72ce26ec9/packages/agent/src/agent-loop.ts",
+          "kind": "source"
+        },
+        {
+          "path": "packages/coding-agent/docs/compaction.md",
+          "url": "https://github.com/earendil-works/pi/blob/a588a7bc4d1bc16554ed2a8044fd4be72ce26ec9/packages/coding-agent/docs/compaction.md",
+          "kind": "documentation"
+        },
+        {
+          "path": "packages/durable/README.md",
+          "url": "https://github.com/earendil-works/pi/blob/a588a7bc4d1bc16554ed2a8044fd4be72ce26ec9/packages/durable/README.md",
+          "kind": "documentation"
+        },
+        {
+          "path": "packages/telemetry/README.md",
+          "url": "https://github.com/earendil-works/pi/blob/a588a7bc4d1bc16554ed2a8044fd4be72ce26ec9/packages/telemetry/README.md",
+          "kind": "documentation"
+        },
+        {
+          "path": "packages/evals/README.md",
+          "url": "https://github.com/earendil-works/pi/blob/a588a7bc4d1bc16554ed2a8044fd4be72ce26ec9/packages/evals/README.md",
+          "kind": "documentation"
+        }
+      ]
+    },
+    {
+      "repository": "deepseek-ai/deepseek-harness",
+      "default_branch": "master",
+      "commit": "4b399c39a6d1479cd84ca591b4d7c88e24d38a96",
+      "license": "MIT",
+      "metadata_url": "https://api.github.com/repos/deepseek-ai/deepseek-harness",
+      "snapshot_url": "https://github.com/deepseek-ai/deepseek-harness/tree/4b399c39a6d1479cd84ca591b4d7c88e24d38a96",
+      "reviewed_files": [
+        {
+          "path": "README.md",
+          "url": "https://github.com/deepseek-ai/deepseek-harness/blob/4b399c39a6d1479cd84ca591b4d7c88e24d38a96/README.md",
+          "kind": "documentation"
+        },
+        {
+          "path": "docs/architecture.md",
+          "url": "https://github.com/deepseek-ai/deepseek-harness/blob/4b399c39a6d1479cd84ca591b4d7c88e24d38a96/docs/architecture.md",
+          "kind": "documentation"
+        },
+        {
+          "path": "packages/core/agent-loop/README.md",
+          "url": "https://github.com/deepseek-ai/deepseek-harness/blob/4b399c39a6d1479cd84ca591b4d7c88e24d38a96/packages/core/agent-loop/README.md",
+          "kind": "documentation"
+        },
+        {
+          "path": "packages/core/agent-loop/src/agent.ts",
+          "url": "https://github.com/deepseek-ai/deepseek-harness/blob/4b399c39a6d1479cd84ca591b4d7c88e24d38a96/packages/core/agent-loop/src/agent.ts",
+          "kind": "source"
+        },
+        {
+          "path": "docs/subsystems/tools.md",
+          "url": "https://github.com/deepseek-ai/deepseek-harness/blob/4b399c39a6d1479cd84ca591b4d7c88e24d38a96/docs/subsystems/tools.md",
+          "kind": "documentation"
+        },
+        {
+          "path": "packages/core/tools/src/batch.ts",
+          "url": "https://github.com/deepseek-ai/deepseek-harness/blob/4b399c39a6d1479cd84ca591b4d7c88e24d38a96/packages/core/tools/src/batch.ts",
+          "kind": "source"
+        },
+        {
+          "path": "docs/subsystems/compaction.md",
+          "url": "https://github.com/deepseek-ai/deepseek-harness/blob/4b399c39a6d1479cd84ca591b4d7c88e24d38a96/docs/subsystems/compaction.md",
+          "kind": "documentation"
+        },
+        {
+          "path": "docs/subsystems/subagent.md",
+          "url": "https://github.com/deepseek-ai/deepseek-harness/blob/4b399c39a6d1479cd84ca591b4d7c88e24d38a96/docs/subsystems/subagent.md",
+          "kind": "documentation"
+        },
+        {
+          "path": "docs/subsystems/otel.md",
+          "url": "https://github.com/deepseek-ai/deepseek-harness/blob/4b399c39a6d1479cd84ca591b4d7c88e24d38a96/docs/subsystems/otel.md",
+          "kind": "documentation"
+        }
+      ]
+    },
+    {
+      "repository": "langchain-ai/deepagents",
+      "default_branch": "main",
+      "commit": "084f04fe2951b6c69ae2f684fbc5af0e3765dbc3",
+      "license": "MIT",
+      "metadata_url": "https://api.github.com/repos/langchain-ai/deepagents",
+      "snapshot_url": "https://github.com/langchain-ai/deepagents/tree/084f04fe2951b6c69ae2f684fbc5af0e3765dbc3",
+      "reviewed_files": [
+        {
+          "path": "libs/ARCHITECTURE.md",
+          "url": "https://github.com/langchain-ai/deepagents/blob/084f04fe2951b6c69ae2f684fbc5af0e3765dbc3/libs/ARCHITECTURE.md",
+          "kind": "documentation"
+        },
+        {
+          "path": "libs/deepagents/deepagents/graph.py",
+          "url": "https://github.com/langchain-ai/deepagents/blob/084f04fe2951b6c69ae2f684fbc5af0e3765dbc3/libs/deepagents/deepagents/graph.py",
+          "kind": "source"
+        },
+        {
+          "path": "libs/deepagents/deepagents/middleware/memory.py",
+          "url": "https://github.com/langchain-ai/deepagents/blob/084f04fe2951b6c69ae2f684fbc5af0e3765dbc3/libs/deepagents/deepagents/middleware/memory.py",
+          "kind": "source"
+        },
+        {
+          "path": "libs/evals/README.md",
+          "url": "https://github.com/langchain-ai/deepagents/blob/084f04fe2951b6c69ae2f684fbc5af0e3765dbc3/libs/evals/README.md",
+          "kind": "documentation"
+        }
+      ]
+    },
+    {
+      "repository": "OpenHands/software-agent-sdk",
+      "default_branch": "main",
+      "commit": "077f3fad6d31cd852be5c87176e0a93c3b446126",
+      "license": "MIT",
+      "metadata_url": "https://api.github.com/repos/OpenHands/software-agent-sdk",
+      "snapshot_url": "https://github.com/OpenHands/software-agent-sdk/tree/077f3fad6d31cd852be5c87176e0a93c3b446126",
+      "reviewed_files": [
+        {
+          "path": "README.md",
+          "url": "https://github.com/OpenHands/software-agent-sdk/blob/077f3fad6d31cd852be5c87176e0a93c3b446126/README.md",
+          "kind": "documentation"
+        },
+        {
+          "path": "openhands-sdk/openhands/sdk/context/condenser/README.md",
+          "url": "https://github.com/OpenHands/software-agent-sdk/blob/077f3fad6d31cd852be5c87176e0a93c3b446126/openhands-sdk/openhands/sdk/context/condenser/README.md",
+          "kind": "documentation"
+        },
+        {
+          "path": "openhands-sdk/openhands/sdk/conversation/event_store.py",
+          "url": "https://github.com/OpenHands/software-agent-sdk/blob/077f3fad6d31cd852be5c87176e0a93c3b446126/openhands-sdk/openhands/sdk/conversation/event_store.py",
+          "kind": "source"
+        }
+      ]
+    },
+    {
+      "repository": "anomalyco/opencode",
+      "default_branch": "dev",
+      "commit": "e1fb08afc547cd838ebc8ee7741d41d92edc0d6b",
+      "license": "MIT",
+      "metadata_url": "https://api.github.com/repos/anomalyco/opencode",
+      "snapshot_url": "https://github.com/anomalyco/opencode/tree/e1fb08afc547cd838ebc8ee7741d41d92edc0d6b",
+      "reviewed_files": [
+        {
+          "path": "README.md",
+          "url": "https://github.com/anomalyco/opencode/blob/e1fb08afc547cd838ebc8ee7741d41d92edc0d6b/README.md",
+          "kind": "documentation"
+        },
+        {
+          "path": "packages/core/src/session/compaction.ts",
+          "url": "https://github.com/anomalyco/opencode/blob/e1fb08afc547cd838ebc8ee7741d41d92edc0d6b/packages/core/src/session/compaction.ts",
+          "kind": "source"
+        },
+        {
+          "path": "packages/core/src/session/execution/subagent-report.ts",
+          "url": "https://github.com/anomalyco/opencode/blob/e1fb08afc547cd838ebc8ee7741d41d92edc0d6b/packages/core/src/session/execution/subagent-report.ts",
+          "kind": "source"
+        }
+      ]
+    },
+    {
+      "repository": "openai/codex",
+      "default_branch": "main",
+      "commit": "af81d2770f1dd1d4d10a75e3f5e51596df7a905d",
+      "license": "Apache-2.0",
+      "metadata_url": "https://api.github.com/repos/openai/codex",
+      "snapshot_url": "https://github.com/openai/codex/tree/af81d2770f1dd1d4d10a75e3f5e51596df7a905d",
+      "reviewed_files": [
+        {
+          "path": "codex-rs/core/README.md",
+          "url": "https://github.com/openai/codex/blob/af81d2770f1dd1d4d10a75e3f5e51596df7a905d/codex-rs/core/README.md",
+          "kind": "documentation"
+        },
+        {
+          "path": "codex-rs/memories/README.md",
+          "url": "https://github.com/openai/codex/blob/af81d2770f1dd1d4d10a75e3f5e51596df7a905d/codex-rs/memories/README.md",
+          "kind": "documentation"
+        },
+        {
+          "path": "codex-rs/execpolicy/README.md",
+          "url": "https://github.com/openai/codex/blob/af81d2770f1dd1d4d10a75e3f5e51596df7a905d/codex-rs/execpolicy/README.md",
+          "kind": "documentation"
+        }
+      ]
+    },
+    {
+      "repository": "google-gemini/gemini-cli",
+      "default_branch": "main",
+      "commit": "eecccfcd5aff25de5e78135ca20f7abe3f566955",
+      "license": "Apache-2.0",
+      "metadata_url": "https://api.github.com/repos/google-gemini/gemini-cli",
+      "snapshot_url": "https://github.com/google-gemini/gemini-cli/tree/eecccfcd5aff25de5e78135ca20f7abe3f566955",
+      "reviewed_files": [
+        {
+          "path": "packages/core/src/tools/tool-registry.ts",
+          "url": "https://github.com/google-gemini/gemini-cli/blob/eecccfcd5aff25de5e78135ca20f7abe3f566955/packages/core/src/tools/tool-registry.ts",
+          "kind": "source"
+        }
+      ]
+    },
+    {
+      "repository": "SWE-agent/mini-swe-agent",
+      "default_branch": "main",
+      "commit": "04d809ceab9df28f9adaed044884180159172930",
+      "license": "MIT",
+      "metadata_url": "https://api.github.com/repos/SWE-agent/mini-swe-agent",
+      "snapshot_url": "https://github.com/SWE-agent/mini-swe-agent/tree/04d809ceab9df28f9adaed044884180159172930",
+      "reviewed_files": [
+        {
+          "path": "README.md",
+          "url": "https://github.com/SWE-agent/mini-swe-agent/blob/04d809ceab9df28f9adaed044884180159172930/README.md",
+          "kind": "documentation"
+        },
+        {
+          "path": "src/minisweagent/agents/default.py",
+          "url": "https://github.com/SWE-agent/mini-swe-agent/blob/04d809ceab9df28f9adaed044884180159172930/src/minisweagent/agents/default.py",
+          "kind": "source"
+        }
+      ]
+    },
+    {
+      "repository": "anthropics/claude-code",
+      "default_branch": "main",
+      "commit": "50cdc7005318f630144c28217d1dada32e6ba762",
+      "license": "Commercial terms (see LICENSE.md)",
+      "metadata_url": "https://api.github.com/repos/anthropics/claude-code",
+      "snapshot_url": "https://github.com/anthropics/claude-code/tree/50cdc7005318f630144c28217d1dada32e6ba762",
+      "reviewed_files": [
+        {
+          "path": "LICENSE.md",
+          "url": "https://github.com/anthropics/claude-code/blob/50cdc7005318f630144c28217d1dada32e6ba762/LICENSE.md",
+          "kind": "license"
+        }
+      ]
+    }
+  ],
+  "live_documentation": [
+    {
+      "url": "https://code.claude.com/docs/en/how-claude-code-works",
+      "kind": "official product documentation"
+    },
+    {
+      "url": "https://code.claude.com/docs/en/sub-agents",
+      "kind": "official product documentation"
+    },
+    {
+      "url": "https://opencode.ai/docs/agents/",
+      "kind": "official product documentation"
+    },
+    {
+      "url": "https://www.anthropic.com/research/effective-harnesses-for-long-running-agents",
+      "kind": "official engineering article"
+    },
+    {
+      "url": "https://www.anthropic.com/research/effective-context-engineering-for-ai-agents",
+      "kind": "official engineering article"
+    }
+  ]
+}
