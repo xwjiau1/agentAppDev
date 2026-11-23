@@ -21,6 +21,10 @@ def entries():
             for folder, title, pattern in LAYERS]
 
 
+def incubating_projects():
+    return sorted((ROOT / "incubator").glob("*/README.md"))
+
+
 def link(path):
     relative = Path(os.path.relpath(path, INDEX.parent)).as_posix()
     return re.sub(r"[\s()\[\]#?%<>]", lambda m: quote(m.group(0), safe=""), relative)
@@ -40,7 +44,16 @@ def build_index():
              "## 内容规模", "", "| 层级 | 条目数 |", "|---|---:|"]
     for folder, title, files in groups:
         lines.append(f"| `{folder}/`：{title} | {len(files)} |")
-    lines += ["", "统计单位分别为案例说明、技术解析和知识点；不等于源码文件数。", ""]
+    projects = incubating_projects()
+    lines.append(f"| `incubator/`：孵化项目 | {len(projects)} |")
+    lines += ["", "统计单位分别为案例说明、技术解析、知识点和孵化项目 README；不等于源码文件数。", "",
+              "## 孵化项目", "",
+              "孵化项目与已归档案例分开统计，实际实现状态以各项目 README 为准。", ""]
+    for project in projects:
+        heading = next((s[2:].strip() for s in project.read_text(encoding="utf-8-sig").splitlines()
+                        if s.startswith("# ")), project.parent.name)
+        lines.append(f"- [{heading}]({link(project)})")
+    lines.append("")
     for folder, title, files in groups:
         lines += [f"## {title}（{folder}）", ""]
         for category in sorted({f.parent.name for f in files} if folder != "application"
@@ -64,6 +77,9 @@ def build_index():
 def owned_docs():
     docs = [ROOT / "README.md", ROOT / "AGENTS.md", ROOT / "Python-base" / "README.md"]
     docs.extend((ROOT / "doc").glob("*.md"))
+    for project in incubating_projects():
+        docs.append(project)
+        docs.extend((project.parent / "docs").glob("*.md"))
     for _, _, files in entries():
         docs.extend(files)
     return sorted(set(docs))
@@ -103,7 +119,7 @@ def check():
     for error in errors:
         print(error)
     print(f"检查 {len(docs)} 篇维护文档、{total} 处本地文件链接；错误 {len(errors)} 项。")
-    print("范围：仓库入口、案例说明、技术解析、Python 知识点和 doc 文档；"
+    print("范围：仓库入口、案例说明、技术解析、Python 知识点、doc 文档和孵化项目 README/docs；"
           "不检查第三方内部文档、远程 URL、标题锚点或代码摘录一致性。")
     return bool(errors)
 

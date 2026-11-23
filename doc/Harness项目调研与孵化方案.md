@@ -2,6 +2,8 @@
 
 调研日期：2026-11-24。目标是在本仓库中孵化可理解、可扩展、可评估的通用 Agent 运行时，覆盖 Loop、工具、记忆、上下文、评估、日志追溯与子 Agent，并持续向技术库沉淀实现经验。
 
+后续落地入口：[Agent Harness MVP](../incubator/agent-harness/README.md)。下文保留长期路线；v0.1 范围以项目内 MVP 设计为准，先实现单 Agent 文件任务，暂缓数据库、恢复、记忆、子 Agent 和插件能力。
+
 ## 1. 建议与选型结论
 
 **整体主参考选择 DeepSeek Harness（dsh）；内核精读选择 Pi；Python 工程实现重点对照 OpenHands Software Agent SDK。** 这是针对本项目目标的设计判断，不是性能排名。
@@ -219,7 +221,7 @@ flowchart TD
 
 现有 [通用 Agent Harness 案例](../application/自动化与工具助手/通用AgentHarness/案例说明.md) 来自本地 learn-claude-code 快照，已有 s01–s17 的循环、权限、记忆、工作流和目标控制材料。它适合作为学习和对照来源，不应被覆盖成新项目；其 MCPClient 是协议替身，部分模块还含 Unix 依赖，复用前需核对。
 
-建议未来新项目独立放在 **`incubator/agent-harness/`**，保留自己的 `pyproject.toml`、`src/`、`tests/`、`evals/`、`examples/` 和设计记录。本次只交付调研与方案，尚未创建运行时或将架构提案标记为可运行案例。开始实现时再把孵化目录纳入仓库维护规则和索引生成器。
+新项目已在 **`incubator/agent-harness/`** 独立孵化，当前持久化 MVP 设计、开发计划、开发记录和示例输入；尚未创建运行时代码，也不将设计提案标记为可运行案例。孵化入口与文档已纳入仓库维护规则和索引生成器。`pyproject.toml`、`src/` 和 `tests/` 在开始实现时创建，其他目录按实际需要增加。
 
 建议按每个可验证能力形成以下积累：
 
