@@ -18,8 +18,9 @@
 | [技术实现方案](docs/技术实现方案.md) | 技术栈及选型依据、模块与接口、关键实现、代码质量和扩展规则 |
 | [开发计划](docs/开发计划.md) | 先做什么、每一步交付什么、如何验证和提交 |
 | [开发记录](docs/开发记录.md) | 当前进度、已作决策、验证结果和下一步 |
+| [环境与 CI 排障备忘](docs/环境与CI排障备忘.md) | pip/uv 环境、PyCharm 导入与调试、CI 长文件名和系统镜像兼容问题 |
 
-## 一句话看懂首版
+## 目标流程（D2/D3 尚未完整实现）
 
 用户给出一个文件整理任务 → Agent 读取输入 → 调用工具生成结果 → 程序自动核对结果 → 留下完整运行记录。过程中可以按 Ctrl+C，达到预算也会停止。
 
@@ -41,16 +42,16 @@
 在本项目目录执行（本次已验证 Windows / Python 3.12.8）：
 
 ```powershell
-python -m uv sync --locked
-python -m uv run --locked python -m harness_agent run --case examples/demo
-python -m uv run --locked python -m unittest discover -s tests -v
-python -m uv run --locked ruff check src tests
-python -m uv run --locked mypy src tests
+uv sync --locked
+uv run --locked python -m harness_agent run --case examples/demo
+uv run --locked python -m unittest discover -s tests -v
+uv run --locked ruff check src tests
+uv run --locked mypy src tests
 ```
 
 需要先安装 uv 0.13.9。输出文件位于 `.runs/<run_id>/output/result.json`。模拟模型是固定演示脚本，会解析实际输入，不读取 expected.json；不能把它当作通用自然语言模型。
 
-本批验证 11 项测试通过，含分支覆盖统计为 91%。当前 CLI 的 completed 只表示 D1 循环结束；自动验收、持久轨迹、可配置预算和取消收尾仍待 D2/D3。GitHub Actions 已配置，远端执行结果另行核对。
+本批验证 11 项测试通过，含分支覆盖统计为 91%。当前 CLI 的 completed 只表示 D1 循环结束；自动验收、持久轨迹、可配置预算和取消收尾仍待 D2/D3。CI 已完成 Windows/Linux 双环境验证，历史故障、修复与证据见排障备忘；后续提交仍需独立核对。
 
 ## 后续目标命令
 
