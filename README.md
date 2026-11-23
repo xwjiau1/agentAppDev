@@ -4,7 +4,7 @@
 
 ## 仓库导航与维护
 
-- [Agent Harness MVP 孵化项目](incubator/agent-harness/README.md)：首版产品与架构设计、开发计划和持续记录，当前处于设计阶段。
+- [Agent Harness MVP 孵化项目](incubator/agent-harness/README.md)：首版产品与架构设计、开发计划和持续记录，当前已完成 D1 离线工具循环。
 - [通用 Harness 项目调研与孵化方案](doc/Harness项目调研与孵化方案.md)：候选项目、可萃取机制、架构提案与分阶段验收。
 - [完整内容索引](doc/内容索引.md)：按分类列出全部案例、技术解析与 Python 知识点。
 - [维护规则与双端同步](doc/维护规则.md)：归档要求、检查命令及本地与 GitHub 同步流程。

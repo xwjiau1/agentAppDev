@@ -3,3 +3,8 @@
 __pycache__/
 *.py[cod]
 .env
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+dist/
