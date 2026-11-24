@@ -1,0 +1,1 @@
+Rotate temporary access credentials when an incident closes. The service desk team can invalidate a token immediately and issue a replacement after identity verification.

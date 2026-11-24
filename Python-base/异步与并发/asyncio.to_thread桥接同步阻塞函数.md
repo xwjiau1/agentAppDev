@@ -32,4 +32,6 @@ tokens = run.tokens
 
 ## 易错点与追问
 
+取消等待线程结果的协程时，同步函数可能仍在执行。持有资源的范围应覆盖线程真正结束。混合检索 RAG 的 `InferenceSlot` 将释放锁放在后台任务的 `finally` 中，从请求协程用 `asyncio.shield(worker)` 等待该任务。应用持有任务引用，退出时等待剩余计算。测试取消首个等待者，确认后续请求直到线程结束前仍会得到忙碌响应。[后台任务源码](../../incubator/hybrid-rag/encoder/rag_models/api.py#L34-L55) · [取消回归测试](../../incubator/hybrid-rag/encoder/tests/test_api.py)
+
 它主要适合桥接阻塞I/O等同步接口，不应承诺任意CPU计算自动多核加速。共享客户端是否线程安全需依赖其实现。

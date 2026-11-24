@@ -1,0 +1,5 @@
+rag-api/mvnw text eol=lf
+rag-api/mvnw.cmd text eol=crlf
+sample/corpus/**/*.md text eol=lf
+sample/corpus/**/*.txt text eol=lf
+*.pdf binary

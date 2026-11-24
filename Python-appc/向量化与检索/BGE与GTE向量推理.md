@@ -10,6 +10,10 @@ BGE-M3通过dense_vecs取密集向量，GTE通过查询指令区分查询与文�
 
 ## 代码解析
 
+### BGE-M3 联合编码
+
+混合检索 RAG 的 `/encode` 在单次前向中打开 `return_dense` 与 `return_sparse`，得到 `dense_vecs` 和 `lexical_weights`。模型 tokenizer 在前向前检查含特殊 token 的输入长度。服务按输入顺序组装返回，将词权重字典的键化为整数 token ID，按 ID 排序并拆为等长的 `indices` 和 `values`。空词权重保留为空数组，由检索端决定如何处理。`zip(..., strict=True)` 会在模型输出掉项时抛出异常，防止批次向量和出处错位。[联合编码源码](../../incubator/hybrid-rag/encoder/rag_models/models.py#L75-L91) · [稀疏向量序列化](../../incubator/hybrid-rag/encoder/rag_models/models.py#L40-L44)
+
 ### 批量编码
 
 [BGE与GTE文本向量推理](../../application/模型与服务示例/BGE与GTE文本向量推理/案例说明.md) · [bge-m3使用.py，24–30行](../../application/模型与服务示例/BGE与GTE文本向量推理/bge-m3使用.py#L24-L30)

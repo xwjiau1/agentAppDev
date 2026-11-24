@@ -1,0 +1,7 @@
+[
+  {"name":"identifier", "query":"TKT-8472", "expected":[{"source":"operations/retention.md"}]},
+  {"name":"paraphrase", "query":"How long do we keep incident files once the ticket is resolved?", "expected":[{"source":"operations/retention.md"}]},
+  {"name":"chinese-pdf", "query":"退款批准后多久能退回原支付渠道？", "expected":[{"source":"policies/refund.pdf", "page":2}]},
+  {"name":"filter", "query":"审核进度在哪里查看？", "filterSources":["policies/refund.pdf"], "expected":[{"source":"policies/refund.pdf", "page":1},{"source":"policies/refund.pdf", "page":2}]},
+  {"name":"no-match", "query":"ZXQ unknown policy", "filterSources":["absent.txt"], "expected":[]}
+]

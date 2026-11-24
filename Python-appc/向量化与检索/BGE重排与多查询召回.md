@@ -10,6 +10,10 @@
 
 ## 代码解析
 
+### RRF 候选接入 BGE Reranker v2 M3
+
+混合检索 RAG 使用固定修订的 `BAAI/bge-reranker-v2-m3` 对原查询和 RRF 候选正文联合打分，关闭分数归一化。Java 校验候选 ID 的完整性，通过 ID 重新关联分数与原候选 payload，再执行稳定降序排序，最后截取 `topK`。模型超时和结果校验失败时，保留 RRF 的排序和评分类型。阈值若依赖分数绝对值，需要对目标语料单独标定。[Python 打分](../../incubator/hybrid-rag/encoder/rag_models/models.py#L103-L114) · [Java 重排](../../incubator/hybrid-rag/rag-api/src/main/java/dev/agent/rag/SearchService.java#L65-L83) · [评估入口](../../incubator/hybrid-rag/sample/evaluate.py)
+
 ### 联合编码打分
 
 [BGE交叉编码重排](../../application/模型与服务示例/BGE交叉编码重排/案例说明.md) · [beg-reranker.py，18–26行](../../application/模型与服务示例/BGE交叉编码重排/beg-reranker.py#L18-L26)

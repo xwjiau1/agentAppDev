@@ -1,0 +1,13 @@
+services:
+  encoder:
+    environment:
+      MODEL_PATH: /snapshot
+      HF_HUB_OFFLINE: '1'
+    volumes:
+      - ${BGE_M3_SNAPSHOT:?Set BGE_M3_SNAPSHOT}:/snapshot:ro
+  reranker:
+    environment:
+      MODEL_PATH: /snapshot
+      HF_HUB_OFFLINE: '1'
+    volumes:
+      - ${BGE_RERANKER_SNAPSHOT:?Set BGE_RERANKER_SNAPSHOT}:/snapshot:ro

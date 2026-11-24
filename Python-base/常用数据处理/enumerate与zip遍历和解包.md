@@ -32,3 +32,5 @@ zip配对邻居ID与距离，enumerate再提供排名计数；(idx, dist)是嵌�
 ## 易错点与追问
 
 zip返回迭代器，不是可无限重复遍历的列表。维度或样本对齐错误可能被默认截断悄悄隐藏。
+
+混合检索 RAG 使用 `zip(items, output["dense_vecs"], strict=True)` 对齐模型输出和原批次。返回少一条或多一条时，迭代过程会抛出 `ValueError`。`strict=True` 自 Python 3.10 提供，长度一致时仍依赖模型返回正确顺序。[批量向量组装源码](../../incubator/hybrid-rag/encoder/rag_models/models.py#L83-L90)

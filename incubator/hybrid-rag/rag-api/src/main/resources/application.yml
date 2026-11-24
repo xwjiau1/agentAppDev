@@ -1,0 +1,19 @@
+server:
+  error:
+    include-message: never
+spring:
+  jackson:
+    default-property-inclusion: non_null
+rag:
+  encoder-url: ${ENCODER_URL:http://localhost:8001}
+  reranker-url: ${RERANKER_URL:http://localhost:8002}
+  qdrant-url: ${QDRANT_URL:http://localhost:6333}
+  collection: ${RAG_COLLECTION:rag_chunks}
+  corpus: ${RAG_CORPUS:../sample/corpus}
+  ingest-lock: ${RAG_INGEST_LOCK:./var/ingest.lock}
+  rerank-enabled: ${RAG_RERANK_ENABLED:true}
+  evaluation-enabled: ${RAG_EVALUATION_ENABLED:false}
+  query-timeout: ${RAG_QUERY_TIMEOUT:30s}
+  ingest-timeout: ${RAG_INGEST_TIMEOUT:120s}
+  rerank-timeout: ${RAG_RERANK_TIMEOUT:30s}
+  context-budget: ${RAG_CONTEXT_BUDGET:4000}

@@ -1,0 +1,7 @@
+/.env
+/.local/
+/rag-api/var/
+**/__pycache__/
+**/.pytest_cache/
+**/.venv/
+**/target/

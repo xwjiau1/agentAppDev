@@ -5,6 +5,7 @@
 ## 仓库导航与维护
 
 - [Agent Harness MVP 孵化项目](incubator/agent-harness/README.md)：首版产品与架构设计、开发计划和持续记录，当前已完成 D1 离线工具循环。
+- [混合检索 RAG 孵化项目](incubator/hybrid-rag/README.md) · Spring Boot、LangChain4j、Qdrant 与本地 BGE 双模型，使用 Docker Compose 导入文档并返回带页码的检索上下文。
 - [通用 Harness 项目调研与孵化方案](doc/Harness项目调研与孵化方案.md)：候选项目、可萃取机制、架构提案与分阶段验收。
 - [完整内容索引](doc/内容索引.md)：按分类列出全部案例、技术解析与 Python 知识点。
 - [维护规则与双端同步](doc/维护规则.md)：归档要求、检查命令及本地与 GitHub 同步流程。
@@ -66,6 +67,9 @@
 
 | 分类 | 技术文档 | 关联应用 |
 |---|---|---|
+| 工程化 | [FastAPI模型生命周期与推理限流](Python-appc/工程化/FastAPI模型生命周期与推理限流.md) | [混合检索 RAG](incubator/hybrid-rag/README.md) |
+| 文档解析与切片 | [LangChain4j递归切片与PDF页码](Python-appc/文档解析与切片/LangChain4j递归切片与PDF页码.md) | [混合检索 RAG](incubator/hybrid-rag/README.md) |
+| 向量化与检索 | [Qdrant具名向量与RRF融合](Python-appc/向量化与检索/Qdrant具名向量与RRF融合.md) | [混合检索 RAG](incubator/hybrid-rag/README.md) |
 | 效果评估 | [DeepEval效果评估](Python-appc/效果评估/DeepEval效果评估.md) | [投顾AI助手效果评估](application/金融投研与投顾/投顾AI助手效果评估/案例说明.md) |
 | 效果评估 | [LangSmith效果评估](Python-appc/效果评估/LangSmith效果评估.md) | [投顾AI助手效果评估](application/金融投研与投顾/投顾AI助手效果评估/案例说明.md) |
 | 效果评估 | [OpenEvals RAG评估](Python-appc/效果评估/OpenEvals%20RAG评估.md) | [OpenEvals评估与自动化测试](application/基础技术示例/OpenEvals评估与自动化测试/案例说明.md) |
